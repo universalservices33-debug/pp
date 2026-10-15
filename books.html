@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Books Digital Library (378 Books) | CLJC Warangal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        church: {
+                            dark: '#070B19',
+                            card: '#0F172A',
+                            gold: '#F59E0B',
+                            lightGold: '#FDE68A',
+                            accent: '#0284C7',
+                            border: 'rgba(245, 158, 11, 0.2)'
+                        }
+                    },
+                    fontFamily: {
+                        telugu: ['Gautami', 'Noto Sans Telugu', 'Segoe UI', 'sans-serif'],
+                        heading: ['Cinzel', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Telugu Messages 378 Books Data -->
+    <script src="assets/bible/telugu_messages.js"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans Telugu', sans-serif;
+            background-color: #070B19;
+            color: #E2E8F0;
+        }
+        .heading-font {
+            font-family: 'Cinzel', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 50%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(245, 158, 11, 0.18);
+        }
+        .glass-panel-hover:hover {
+            border-color: rgba(245, 158, 11, 0.45);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(245, 158, 11, 0.15);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070B19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D97706;
+        }
+    </style>
+</head>
+<body class="selection:bg-amber-500 selection:text-black min-h-screen flex flex-col justify-between">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+        <span class="inline-block animate-pulse text-amber-200">✨</span>
+        <span>"For the word of God is quick, and powerful, and sharper than any twoedged sword" — 378 End-Time Message Books by Prophet William Marrion Branham</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-amber-500/20 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand with Jesus and Prophet together on the Left -->
+                <a href="index.html#home" class="flex items-center gap-2.5 sm:gap-3 group">
+                    <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+                        <img src="assets/images/jesus.png" alt="Jesus Christ" class="h-11 w-11 sm:h-12 sm:w-12 object-cover rounded-full border-2 border-amber-500/80 p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300" title="Lord Jesus Christ">
+                        <img src="assets/images/branham.png" alt="Prophet William Branham" class="h-11 w-11 sm:h-12 sm:w-12 object-cover rounded-full border-2 border-amber-500/80 p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300" title="Prophet William Marrion Branham">
+                    </div>
+                    
+                    <div class="text-left">
+                        <div class="heading-font text-sm sm:text-base lg:text-lg font-bold tracking-wider gold-gradient-text leading-tight whitespace-nowrap">
+                            CHURCH OF LORD JESUS CHRIST
+                        </div>
+                        <div class="text-[11px] sm:text-xs text-amber-400 font-medium tracking-wider uppercase flex items-center gap-1.5 mt-0.5 whitespace-nowrap">
+                            <i class="fa-solid fa-location-dot text-rose-400 text-[10px]"></i> Warangal, Telangana | TMC Warangal
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Back to Home Action Button -->
+                <div class="flex items-center gap-3">
+                    <a href="index.html" 
+                       class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-amber-500/15 hover:bg-amber-500 text-amber-300 hover:text-slate-950 font-bold text-xs sm:text-sm border border-amber-500/40 hover:border-amber-400 transition-all shadow-md">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Back to Home</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow py-10 sm:py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Hero Banner -->
+            <div class="text-center max-w-3xl mx-auto mb-10 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-book-bible"></i> Complete Digital Library
+                </div>
+                <h1 class="heading-font text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+                    Message Books Digital Library <br>
+                    <span class="gold-gradient-text">Complete Collection of 378 Books</span>
+                </h1>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    End-Time Message sermons delivered by God's Prophet William Marrion Branham — Official translations from MessageHub.info. Read online or download free in official A4 PDF format.
+                </p>
+                <div class="pt-1 flex flex-wrap justify-center gap-3 text-xs">
+                    <a href="https://www.messagehub.info/te/messages.do" target="_blank" 
+                       class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 transition-all">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> MessageHub.info Official Portal
+                    </a>
+                    <a href="http://www.youtube.com/@tmcaw" target="_blank" 
+                       class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-rose-900/30 hover:bg-rose-900/50 text-rose-300 border border-rose-500/30 transition-all">
+                        <i class="fa-brands fa-youtube text-rose-400"></i> TMC Warangal YouTube (@tmcaw)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search, Filter & Controls Panel -->
+            <div class="max-w-4xl mx-auto mb-10 space-y-4">
+                <!-- Search Box -->
+                <div class="relative">
+                    <input type="text" id="bookSearchInput" onkeyup="filterBooks()" 
+                           placeholder="Search by sermon title or code (e.g. The Third Exodus, Revelation, 63-0630M, 60-0210M)..." 
+                           class="w-full py-4 pl-12 pr-12 rounded-2xl glass-panel border border-amber-500/40 text-white placeholder-slate-400 focus:outline-none focus:border-amber-400 text-sm sm:text-base shadow-xl">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-amber-400 text-lg"></i>
+                    <button onclick="document.getElementById('bookSearchInput').value=''; filterBooks();" 
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-amber-400 text-base p-1" title="Clear search">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Year Filter Pills -->
+                <div class="flex flex-wrap items-center justify-center gap-2 pt-1 text-xs">
+                    <span class="text-slate-400 font-semibold mr-1">Year:</span>
+                    <button onclick="setYearFilter('all')" class="filter-btn px-3 py-1.5 rounded-lg font-bold bg-amber-500 text-slate-950 transition-all" data-year="all">All (378)</button>
+                    <button onclick="setYearFilter('65')" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700 transition-all" data-year="65">1965</button>
+                    <button onclick="setYearFilter('64')" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700 transition-all" data-year="64">1964</button>
+                    <button onclick="setYearFilter('63')" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700 transition-all" data-year="63">1963</button>
+                    <button onclick="setYearFilter('62')" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700 transition-all" data-year="62">1962</button>
+                    <button onclick="setYearFilter('61')" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700 transition-all" data-year="61">1961</button>
+                    <button onclick="setYearFilter('60')" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700 transition-all" data-year="60">1960</button>
+                    <button onclick="setYearFilter('50s')" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700 transition-all" data-year="50s">1950 - 1959</button>
+                    <button onclick="setYearFilter('40s')" class="filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700 transition-all" data-year="40s">1947 - 1949</button>
+                </div>
+
+                <!-- Results Counter & Status -->
+                <div class="flex items-center justify-between px-2 text-xs sm:text-sm pt-2">
+                    <span id="bookCountText" class="text-amber-400 font-semibold flex items-center gap-1.5">
+                        <i class="fa-solid fa-book text-amber-500"></i> Total 378 Message Books
+                    </span>
+                    <span class="text-slate-400 hidden sm:inline">
+                        <i class="fa-solid fa-circle-check text-emerald-400"></i> Official A4 PDF Format
+                    </span>
+                </div>
+            </div>
+
+            <!-- Books Grid Container -->
+            <div id="booksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically loaded books -->
+            </div>
+
+            <!-- Load More Container -->
+            <div id="loadMoreContainer" class="text-center mt-12">
+                <button onclick="loadMoreBooks()" 
+                        class="px-8 py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 text-slate-950 shadow-xl shadow-amber-500/20 hover:shadow-amber-500/35 transform hover:-translate-y-0.5 transition-all inline-flex items-center gap-2">
+                    <i class="fa-solid fa-plus"></i> Load More Books (+30 Books)
+                </button>
+                <div class="mt-3 text-xs text-slate-400">
+                    or <button onclick="showAllBooks()" class="text-amber-400 underline font-semibold hover:text-white">Show All 378 Books At Once</button>
+                </div>
+            </div>
+
+            <!-- Back to Top Button -->
+            <div class="text-center mt-16 pt-8 border-t border-slate-800/80">
+                <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl glass-panel text-slate-300 hover:text-amber-400 text-xs font-semibold border border-amber-500/30 transition-all">
+                    <i class="fa-solid fa-arrow-up"></i> Back to Top
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/90 border-t border-amber-500/20 py-8 text-center text-xs text-slate-400 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div class="flex items-center justify-center space-x-2">
+                <img src="assets/images/jesus.png" alt="Jesus" class="h-8 w-8 object-cover rounded-full border border-amber-500/60">
+                <img src="assets/images/branham.png" alt="Prophet" class="h-8 w-8 object-cover rounded-full border border-amber-500/60">
+                <span class="heading-font font-bold text-white text-sm ml-2">CHURCH OF LORD JESUS CHRIST - WARANGAL</span>
+            </div>
+            <p class="text-slate-400">
+                End-Time Message Sermons by Prophet William Marrion Branham | TMC Warangal (<a href="http://www.youtube.com/@tmcaw" target="_blank" class="text-amber-400 underline">@tmcaw</a>)
+            </p>
+            <div class="flex justify-center gap-4 text-slate-300 text-xs">
+                <a href="index.html" class="hover:text-amber-400">Home</a>
+                <a href="books.html" class="hover:text-amber-400 font-bold text-amber-400">Message Books Library</a>
+                <a href="index.html#gallery" class="hover:text-amber-400">Gallery</a>
+                <a href="index.html#prayer" class="hover:text-amber-400">Prayer Request</a>
+                <a href="index.html#contact" class="hover:text-amber-400">Contact Us</a>
+            </div>
+            <p class="text-slate-500 text-[11px]">
+                © 2026 CLJC Warangal. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        let allBooks = [];
+        let displayedCount = 30;
+        let filteredBooks = [];
+        let selectedYear = 'all';
+
+        function initBooksLibrary() {
+            if (window.TELUGU_MESSAGES_DATA && Array.isArray(window.TELUGU_MESSAGES_DATA)) {
+                allBooks = window.TELUGU_MESSAGES_DATA;
+                filteredBooks = allBooks;
+                renderBooks();
+            } else {
+                fetch('assets/bible/telugu_messages.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        allBooks = data;
+                        filteredBooks = allBooks;
+                        renderBooks();
+                    })
+                    .catch(err => {
+                        console.error('Books fetch error:', err);
+                    });
+            }
+        }
+
+        function getBookDownloadUrl(book) {
+            if (book.pdf_url) return book.pdf_url;
+            if (book.eid) return `https://www.messagehub.info/download.message?eid=${book.eid}`;
+            return 'https://www.messagehub.info/te/messages.do';
+        }
+
+        function setYearFilter(year) {
+            selectedYear = year;
+            // Update button styles
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.getAttribute('data-year') === year) {
+                    btn.className = 'filter-btn px-3 py-1.5 rounded-lg font-bold bg-amber-500 text-slate-950 transition-all';
+                } else {
+                    btn.className = 'filter-btn px-3 py-1.5 rounded-lg font-medium bg-slate-800 text-slate-300 hover:text-amber-300 border border-slate-700 transition-all';
+                }
+            });
+            filterBooks();
+        }
+
+        function filterBooks() {
+            const searchInput = document.getElementById('bookSearchInput').value.trim().toLowerCase();
+
+            filteredBooks = allBooks.filter(book => {
+                const title = (book.book_title || '').toLowerCase();
+                const desc = (book.description || '').toLowerCase();
+                const matchesSearch = !searchInput || title.includes(searchInput) || desc.includes(searchInput);
+
+                let matchesYear = true;
+                if (selectedYear === '65') matchesYear = desc.startsWith('65-');
+                else if (selectedYear === '64') matchesYear = desc.startsWith('64-');
+                else if (selectedYear === '63') matchesYear = desc.startsWith('63-');
+                else if (selectedYear === '62') matchesYear = desc.startsWith('62-');
+                else if (selectedYear === '61') matchesYear = desc.startsWith('61-');
+                else if (selectedYear === '60') matchesYear = desc.startsWith('60-');
+                else if (selectedYear === '50s') matchesYear = desc.startsWith('50-') || desc.startsWith('51-') || desc.startsWith('52-') || desc.startsWith('53-') || desc.startsWith('54-') || desc.startsWith('55-') || desc.startsWith('56-') || desc.startsWith('57-') || desc.startsWith('58-') || desc.startsWith('59-');
+                else if (selectedYear === '40s') matchesYear = desc.startsWith('47-') || desc.startsWith('48-') || desc.startsWith('49-');
+
+                return matchesSearch && matchesYear;
+            });
+
+            displayedCount = 30;
+            renderBooks();
+        }
+
+        function renderBooks() {
+            const grid = document.getElementById('booksGrid');
+            const countBadge = document.getElementById('bookCountText');
+            const loadMoreBtn = document.getElementById('loadMoreContainer');
+            if (!grid) return;
+
+            if (countBadge) {
+                countBadge.innerHTML = `<i class="fa-solid fa-book text-amber-500"></i> Total ${filteredBooks.length} Message Books (out of 378)`;
+            }
+
+            const booksToRender = filteredBooks.slice(0, displayedCount);
+
+            if (booksToRender.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-16 glass-panel rounded-2xl border border-slate-800">
+                        <i class="fa-solid fa-book-open text-amber-500/40 text-5xl mb-4"></i>
+                        <h4 class="text-white font-bold text-lg">No message books found</h4>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">Please try searching with another keyword or sermon code.</p>
+                        <button onclick="document.getElementById('bookSearchInput').value=''; setYearFilter('all');" class="mt-4 px-4 py-2 bg-amber-500 text-slate-950 font-bold text-xs rounded-xl">
+                            Show All Books
+                        </button>
+                    </div>
+                `;
+                if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            grid.innerHTML = booksToRender.map((book, idx) => {
+                const bookUrl = getBookDownloadUrl(book);
+                const bookNum = book.id || (idx + 1);
+
+                // Extract English title & code
+                let engTitle = book.book_title;
+                let sermonCode = '';
+                const descMatch = (book.description || '').match(/^([0-9A-Z\-]+)\s*(?:\((.*)\))?$/);
+                if (descMatch) {
+                    sermonCode = descMatch[1] || '';
+                    if (descMatch[2]) {
+                        engTitle = descMatch[2].trim();
+                    }
+                }
+
+                return `
+                    <div class="book-card glass-panel rounded-2xl p-6 border border-amber-500/20 hover:border-amber-400/80 transition-all flex flex-col justify-between group shadow-lg hover:shadow-amber-500/10">
+                        <div>
+                            <div class="flex items-start justify-between mb-3">
+                                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30 font-mono">#${bookNum}</span>
+                                <span class="text-[11px] text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 flex items-center gap-1">
+                                    <i class="fa-solid fa-file-pdf"></i> PDF
+                                </span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 book-title group-hover:text-amber-300 transition-colors leading-snug">
+                                ${engTitle}
+                            </h3>
+                            <div class="text-xs text-amber-400/90 font-medium mb-1.5">
+                                ${book.book_title}
+                            </div>
+                            <p class="text-xs text-slate-400 mb-5 font-mono">
+                                ${sermonCode ? sermonCode : book.description}
+                            </p>
+                        </div>
+                        <div>
+                            <a href="${bookUrl}" target="_blank"
+                               class="inline-flex items-center gap-2 text-xs font-bold px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 text-slate-950 border border-amber-400 transition-all w-full justify-center shadow-md">
+                                <i class="fa-solid fa-file-arrow-down text-rose-700 text-sm"></i> Download / Read PDF
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            if (loadMoreBtn) {
+                if (displayedCount < filteredBooks.length) {
+                    loadMoreBtn.style.display = 'block';
+                } else {
+                    loadMoreBtn.style.display = 'none';
+                }
+            }
+        }
+
+        function loadMoreBooks() {
+            displayedCount += 30;
+            renderBooks();
+        }
+
+        function showAllBooks() {
+            displayedCount = filteredBooks.length;
+            renderBooks();
+        }
+
+        // Initialize library when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initBooksLibrary);
+        } else {
+            initBooksLibrary();
+        }
+    </script>
+</body>
+</html>

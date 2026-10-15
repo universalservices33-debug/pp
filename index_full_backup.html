@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="te" class="scroll-smooth notranslate" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Church of Lord Jesus Christ (CLJC) - Warangal | చర్చ్ ఆఫ్ లార్డ్ జీసస్ క్రైస్ట్ వరంగల్</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        church: {
+                            dark: '#070B19',
+                            card: '#0F172A',
+                            gold: '#F59E0B',
+                            lightGold: '#FDE68A',
+                            accent: '#0284C7',
+                            border: 'rgba(245, 158, 11, 0.2)'
+                        }
+                    },
+                    fontFamily: {
+                        telugu: ['Gautami', 'Noto Sans Telugu', 'Segoe UI', 'sans-serif'],
+                        heading: ['Cinzel', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Telugu Messages 378 Books Data -->
+    <script src="assets/bible/telugu_messages.js"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans Telugu', sans-serif;
+            background-color: #070B19;
+            color: #E2E8F0;
+        }
+        .heading-font {
+            font-family: 'Cinzel', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 50%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(245, 158, 11, 0.18);
+        }
+        .glass-panel-hover:hover {
+            border-color: rgba(245, 158, 11, 0.45);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(245, 158, 11, 0.15);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070B19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D97706;
+        }
+    </style>
+</head>
+<body class="selection:bg-amber-500 selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+        <span class="inline-block animate-pulse text-amber-200">✨</span>
+        <span>"Contending for the faith once delivered unto the saints and declaring the Name of the Lord Jesus Christ."</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-amber-500/20 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand with Jesus and Prophet together on the Left -->
+                <a href="#home" class="flex items-center gap-2.5 sm:gap-3 group">
+                    <!-- Twin Holy Avatars together on the left -->
+                    <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+                        <!-- Jesus Image (Left) -->
+                        <img src="assets/images/jesus.png" alt="Jesus Christ" class="h-12 w-12 sm:h-13 sm:w-13 object-cover rounded-full border-2 border-amber-500/80 p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300" title="Lord Jesus Christ">
+                        <!-- Prophet Image (Right of Jesus) -->
+                        <img src="assets/images/branham.png" alt="Prophet William Branham" class="h-12 w-12 sm:h-13 sm:w-13 object-cover rounded-full border-2 border-amber-500/80 p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300" title="Prophet William Marrion Branham">
+                    </div>
+                    
+                    <div class="text-left">
+                        <div class="heading-font text-sm sm:text-base lg:text-lg font-bold tracking-wider gold-gradient-text leading-tight whitespace-nowrap">
+                            CHURCH OF LORD JESUS CHRIST
+                        </div>
+                        <div class="text-[11px] sm:text-xs text-amber-400 font-medium tracking-wider uppercase flex items-center gap-1.5 mt-0.5 whitespace-nowrap">
+                            <i class="fa-solid fa-location-dot text-rose-400 text-[10px]"></i> Warangal, Telangana | TMC Warangal
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-medium text-sm text-slate-300">
+                    <a href="#home" class="hover:text-amber-400 transition-colors">Home</a>
+                    <a href="#messages" class="hover:text-amber-400 transition-colors">Message Books</a>
+                    <a href="#gallery" class="hover:text-amber-400 transition-colors">Gallery</a>
+                    <a href="#prayer" class="hover:text-amber-400 transition-colors">Prayer Request</a>
+                    <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Header CTA Buttons -->
+                <div class="hidden sm:flex items-center gap-2.5">
+                    <a href="http://www.youtube.com/@tmcaw" target="_blank" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-red-600/20 text-red-400 border border-red-500/40 hover:bg-red-600 hover:text-white transition-all flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-brands fa-youtube text-sm"></i> @tmcaw
+                    </a>
+                    <a href="#prayer" class="px-4 py-2 rounded-full text-xs font-semibold bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 shadow-lg shadow-amber-500/20 transition-all transform hover:scale-105 flex items-center gap-1.5">
+                        <i class="fa-solid fa-hands-praying"></i> Prayer Request
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-amber-400 hover:text-amber-300 focus:outline-none p-2" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-amber-500/20 bg-slate-950/95 px-4 pt-3 pb-6 space-y-3 font-medium text-sm">
+            <a href="#home" class="block py-2 text-slate-200 hover:text-amber-400 border-b border-slate-800">Home</a>
+            <a href="#messages" class="block py-2 text-slate-200 hover:text-amber-400 border-b border-slate-800">Telugu Message Books (378)</a>
+            <a href="http://www.youtube.com/@tmcaw" target="_blank" class="block py-2 text-red-400 hover:text-red-300 border-b border-slate-800 flex items-center gap-2">
+                <i class="fa-brands fa-youtube"></i> TMC Warangal YouTube (@tmcaw)
+            </a>
+            <a href="#gallery" class="block py-2 text-slate-200 hover:text-amber-400 border-b border-slate-800">Spiritual Gallery</a>
+            <a href="#prayer" class="block py-2 text-slate-200 hover:text-amber-400 border-b border-slate-800">Prayer Request</a>
+            <a href="#contact" class="block py-2 text-slate-200 hover:text-amber-400">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-10 pb-20 overflow-hidden">
+        <!-- Spiritual Light Glow Effect -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-gradient-to-b from-amber-500/15 via-blue-600/10 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- 3-Column Layout: Left (Jesus), Center (Welcome Text), Right (Prophet William Branham) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+                
+                <!-- 1. LEFT COLUMN: JESUS CHRIST CARD -->
+                <div class="lg:col-span-3 order-2 lg:order-1 flex justify-center">
+                    <div class="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none group">
+                        <div class="relative rounded-3xl overflow-hidden glass-panel border-2 border-amber-500/40 p-2 shadow-2xl transition-all duration-500 group-hover:border-amber-400/80 group-hover:shadow-amber-500/20">
+                            <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-slate-950 flex items-center justify-center">
+                                <img src="assets/images/jesus.png" alt="Lord Jesus Christ" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent"></div>
+                                <div class="absolute bottom-3 inset-x-3 text-center">
+                                    <div class="heading-font text-base sm:text-lg font-bold gold-gradient-text tracking-wider">LORD JESUS CHRIST</div>
+                                    <div class="text-[10px] text-amber-300 font-semibold uppercase tracking-widest mt-0.5">JESUS CHRIST IS LORD</div>
+                                    <p class="text-[11px] text-slate-300 mt-1 italic">"Jesus Christ the same yesterday, and to day, and for ever." — Hebrews 13:8</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. CENTER COLUMN: WELCOME TITLE, DETAILS & CTAs -->
+                <div class="lg:col-span-6 order-1 lg:order-2 text-center space-y-5 px-2">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-300 text-xs font-semibold tracking-wide uppercase shadow-sm">
+                        <i class="fa-solid fa-cross"></i> Grace and Peace Be Multiplied Unto You
+                    </div>
+
+                    <h1 class="heading-font text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+                        <span class="gold-gradient-text block">In the Name of the Lord Jesus Christ</span>
+                        Warm Christian Welcome
+                    </h1>
+
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+                        <strong class="text-amber-400 font-semibold">Church of Lord Jesus Christ (CLJC) Warangal</strong> — A Bible-believing fellowship contending for the original faith, declaring eternal salvation, and sharing the unadulterated End-Time Message.
+                    </p>
+
+                    <!-- CTAs with Message Books and YouTube @tmcaw Link -->
+                    <div class="flex flex-wrap gap-3 justify-center pt-2">
+                        <a href="#messages" class="px-5 py-3 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 text-slate-950 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 transform hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-book-bible"></i> Telugu Message Books (378)
+                        </a>
+                        <a href="http://www.youtube.com/@tmcaw" target="_blank" class="px-5 py-3 rounded-xl font-bold text-xs sm:text-sm bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-600/30 transform hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-youtube text-base"></i> TMC Warangal (@tmcaw)
+                        </a>
+                        <a href="https://maps.google.com/?q=Church+of+Lord+Jesus+Christ+Warangal" target="_blank" class="px-4 py-3 rounded-xl font-semibold text-xs sm:text-sm border border-slate-700 bg-slate-900/70 hover:bg-slate-800 text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-location-arrow text-emerald-400"></i> Church Location
+                        </a>
+                    </div>
+
+                    <!-- Daily Bible Verse Card -->
+                    <div class="p-4 sm:p-5 rounded-2xl glass-panel border border-amber-500/30 text-left relative overflow-hidden group">
+                        <div class="absolute -right-4 -bottom-4 text-amber-500/10 text-8xl font-serif pointer-events-none">❝</div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[11px] sm:text-xs font-bold text-amber-400 uppercase tracking-widest flex items-center gap-1.5">
+                                <i class="fa-solid fa-book-bible"></i> Verse of the Day
+                            </span>
+                            <span class="text-xs text-slate-400 font-serif">Psalm 23:1</span>
+                        </div>
+                        <p class="text-slate-100 font-medium text-xs sm:text-sm italic leading-relaxed">
+                            "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. RIGHT COLUMN: PROPHET WILLIAM BRANHAM CARD -->
+                <div class="lg:col-span-3 order-3 lg:order-3 flex justify-center">
+                    <div class="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none group">
+                        <div class="relative rounded-3xl overflow-hidden glass-panel border-2 border-amber-500/40 p-2 shadow-2xl transition-all duration-500 group-hover:border-amber-400/80 group-hover:shadow-amber-500/20">
+                            <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-slate-950 flex items-center justify-center">
+                                <img src="assets/images/branham.png" alt="Prophet William Marrion Branham" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent"></div>
+                                <div class="absolute bottom-3 inset-x-3 text-center">
+                                    <div class="heading-font text-base sm:text-lg font-bold gold-gradient-text tracking-wider">PROPHET WILLIAM BRANHAM</div>
+                                    <div class="text-[10px] text-amber-300 font-semibold uppercase tracking-widest mt-0.5">GOD'S PROPHET (MALACHI 4:5)</div>
+                                    <p class="text-[11px] text-slate-300 mt-1 italic">"Behold, I will send you Elijah the prophet before the coming of the great and dreadful day of the LORD." — Malachi 4:5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- MESSAGE BOOKS SECTION -->
+    <section id="messages" class="py-20 bg-slate-950/80 border-t border-slate-900 notranslate" translate="no">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+                <span class="text-xs font-bold text-amber-400 uppercase tracking-widest px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30">
+                    378 అంత్యకాలపు వర్తమాన గ్రంథాలు
+                </span>
+                <h2 class="heading-font text-3xl sm:text-4xl font-extrabold text-white">
+                    తెలుగు సందేశ గ్రంథాల లైబ్రరీ <span class="gold-gradient-text">(Message Books Library)</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    దైవ ప్రవక్త విలియం మార్రియన్ బ్రన్హామ్ గారి ప్రసంగాలు — <a href="https://www.messagehub.info/te/messages.do" target="_blank" class="text-amber-400 underline font-semibold hover:text-white">MessageHub.info</a> అధికారిక తెలుగు అనువాదాలు.
+                </p>
+                <div class="pt-2 flex flex-wrap justify-center gap-3">
+                    <a href="books.html" target="_blank" 
+                       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-xs sm:text-sm border border-amber-400 transition-all shadow-lg hover:shadow-amber-500/20">
+                        <i class="fa-solid fa-book-open"></i> పూర్తి 378 గ్రంథాల లైబ్రరీ పేజీ (కొత్త పేజీ)
+                    </a>
+                    <a href="https://www.messagehub.info/te/messages.do" target="_blank" 
+                       class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500/15 border border-amber-500/40 text-amber-300 hover:bg-amber-500 hover:text-slate-950 text-xs font-bold transition-all shadow-md">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> MessageHub.info అధికారిక పోర్టల్
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search Filter Bar & Counter -->
+            <div class="max-w-2xl mx-auto mb-10 space-y-3">
+                <div class="relative">
+                    <input type="text" id="bookSearchInput" onkeyup="filterBooks()" placeholder="పుస్తకం పేరు లేదా కోడ్ టైప్ చేయండి (ఉదా: త్రుతీయ నిర్గమము, ప్రత్యక్షత, 63-0630M)..." 
+                           class="w-full py-4 pl-12 pr-12 rounded-2xl glass-panel border border-amber-500/40 text-white placeholder-slate-400 focus:outline-none focus:border-amber-400 text-sm shadow-xl">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-amber-400 text-base"></i>
+                    <button onclick="document.getElementById('bookSearchInput').value=''; filterBooks();" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-amber-400 text-sm p-1">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="flex items-center justify-between px-2 text-xs">
+                    <span id="bookCountText" class="text-amber-400 font-semibold flex items-center gap-1.5">
+                        <i class="fa-solid fa-book text-amber-500"></i> మొత్తం 378 పుస్తకములు
+                    </span>
+                    <span class="text-slate-400">అన్ని పుస్తకాలు PDF ఫార్మాట్‌లో లభించును</span>
+                </div>
+            </div>
+
+            <!-- Dynamic Message Books Grid (All 378 Books) -->
+            <div id="booksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+
+            <!-- See More Books (Open Dedicated Library Page) -->
+            <div class="text-center mt-12 space-y-3">
+                <a href="books.html" target="_blank" 
+                   class="px-8 py-4 rounded-xl font-bold text-sm sm:text-base bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 shadow-xl shadow-amber-500/25 hover:shadow-amber-500/40 transform hover:-translate-y-0.5 transition-all inline-flex items-center gap-3">
+                    <i class="fa-solid fa-book-open-reader text-lg"></i>
+                    <span>మరిన్ని పుస్తకములు చూడండి (పూర్తి 378 గ్రంథాల లైబ్రరీ)</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="text-xs text-slate-400">
+                    కొత్త పేజీలో మొత్తం 378 తెలుగు పుస్తకాలు, సంవత్సరం వారీ ఫిల్టర్లు మరియు సెర్చ్ అందుబాటులో ఉన్నాయి.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section id="gallery" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+                <span class="text-xs font-bold text-amber-400 uppercase tracking-widest px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30">
+                    ఆత్మీయ చిత్రమాలిక
+                </span>
+                <h2 class="heading-font text-3xl sm:text-4xl font-extrabold text-white">
+                    చర్చి ఫోటో గ్యాలరీ <span class="gold-gradient-text">(Spiritual Gallery)</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    పరిచర్య, ప్రార్థనలు మరియు దైవజనుల ఆత్మీయ ఛాయాచిత్రాలు.
+                </p>
+            </div>
+
+            <!-- Gallery Grid with Actual Church Assets -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery 1 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel border border-amber-500/30 aspect-video cursor-pointer">
+                    <img src="assets/images/branham_baptism.png" alt="Baptism Service" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-amber-400 font-semibold">ఆత్మీయ పరిచర్య</span>
+                            <h4 class="text-white font-bold text-base">బాప్తిస్మ కూడిక (Baptism Service)</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 2 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel border border-amber-500/30 aspect-video cursor-pointer">
+                    <img src="assets/images/branham_cloud.png" alt="Supernatural Cloud" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-amber-400 font-semibold">దైవ ప్రత్యక్షత</span>
+                            <h4 class="text-white font-bold text-base">అతీంద్రియ మేఘము (The Cloud)</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 3 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel border border-amber-500/30 aspect-video cursor-pointer">
+                    <img src="assets/images/branham_preaching.png" alt="Word Preaching" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-amber-400 font-semibold">పరిశుద్ధ వాక్యము</span>
+                            <h4 class="text-white font-bold text-base">వాక్య పరిచర్య (Preaching The Word)</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 4 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel border border-amber-500/30 aspect-video cursor-pointer">
+                    <img src="assets/images/branham_prayer.png" alt="Healing Prayer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-amber-400 font-semibold">విజ్ఞాపన</span>
+                            <h4 class="text-white font-bold text-base">స్వస్థత ప్రార్థనలు (Healing Prayer)</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 5 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel border border-amber-500/30 aspect-video cursor-pointer">
+                    <img src="assets/images/branham_woods.png" alt="Prayer in Solitude" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-amber-400 font-semibold">ఏకాంత ధ్యానం</span>
+                            <h4 class="text-white font-bold text-base">అరణ్య ప్రార్థన (Prayer in the Woods)</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 6 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel border border-amber-500/30 aspect-video cursor-pointer">
+                    <img src="assets/images/branham.png" alt="God's Servant" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-xs text-amber-400 font-semibold">వర్తమానికుడు</span>
+                            <h4 class="text-white font-bold text-base">దేవుని సేవకులు (God's Servant)</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRAYER REQUEST SECTION -->
+    <section id="prayer" class="py-20 bg-slate-950/80 border-t border-slate-900 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-3xl p-8 sm:p-12 border-2 border-amber-500/30 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center space-y-3 mb-10">
+                    <div class="w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl mx-auto border border-amber-500/40">
+                        <i class="fa-solid fa-hands-praying"></i>
+                    </div>
+                    <h2 class="heading-font text-3xl font-extrabold text-white">
+                        మీ ప్రార్థన అవసరతను పంపండి <span class="gold-gradient-text">(Prayer Request)</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                        "మీలో ఎవనికైనను శ్రమ కలిగినట్లయితే వాడు ప్రార్థన చేయవలెను" — యాకోబు 5:13. మీ ప్రార్థన విన్నపమును నేరుగా పాస్టర్ గారికి పంపండి.
+                    </p>
+                </div>
+
+                <form id="prayerForm" onsubmit="sendPrayerWhatsApp(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">మీ పేరు (Your Name) *</label>
+                            <input type="text" id="prayerName" required placeholder="మీ పూర్తి పేరు" 
+                                   class="w-full py-3 px-4 rounded-xl glass-panel border border-slate-700 focus:border-amber-400 text-white placeholder-slate-500 text-sm focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">ఫోన్ నంబర్ (Phone Number) *</label>
+                            <input type="tel" id="prayerPhone" required placeholder="10 అంకెల మొబైల్ నంబర్" 
+                                   class="w-full py-3 px-4 rounded-xl glass-panel border border-slate-700 focus:border-amber-400 text-white placeholder-slate-500 text-sm focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase mb-2">ప్రార్థన అంశము (Subject) *</label>
+                        <select id="prayerTopic" class="w-full py-3 px-4 rounded-xl glass-panel border border-slate-700 focus:border-amber-400 text-white text-sm focus:outline-none bg-slate-900">
+                            <option value="ఆరోగ్యం / స్వస్థత కొరకు">ఆరోగ్యం / స్వస్థత కొరకు (Health & Healing)</option>
+                            <option value="కుటుంబ సమాధానం కొరకు">కుటుంబ సమాధానం కొరకు (Family Peace)</option>
+                            <option value="ఉద్యోగం / వ్యాపార దీవెన కొరకు">ఉద్యోగం / వ్యాపార దీవెన కొరకు (Job & Business)</option>
+                            <option value="ఆత్మీయ ఎదుగుదల కొరకు">ఆత్మీయ ఎదుగుదల కొరకు (Spiritual Growth)</option>
+                            <option value="ఇతర ప్రార్థన అవసరత">ఇతర ప్రార్థన అవసరత (Other Requests)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase mb-2">ప్రార్థన వివరాలు (Details)</label>
+                        <textarea id="prayerDetails" rows="4" placeholder="మీ ప్రార్థన అవసరత గురించి ఇక్కడ వివరంగా వ్రాయండి..." 
+                                  class="w-full py-3 px-4 rounded-xl glass-panel border border-slate-700 focus:border-amber-400 text-white placeholder-slate-500 text-sm focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" 
+                            class="w-full py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white shadow-xl shadow-emerald-600/30 transition-all flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> పాస్టర్ గారికి వాట్సాప్ ద్వారా పంపండి (Send via WhatsApp)
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION MAP SECTION -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Contact Info Left -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30">
+                            మమ్మల్ని సంప్రదించండి
+                        </span>
+                        <h2 class="heading-font text-3xl sm:text-4xl font-extrabold text-white mt-3">
+                            చర్చి చిరునామా & వివరాలు <span class="gold-gradient-text">(Get In Touch)</span>
+                        </h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Address -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white uppercase tracking-wider">చర్చి చిరునామా</h4>
+                                <p class="text-slate-300 text-sm mt-1 leading-relaxed">
+                                    Church of Lord Jesus Christ (CLJC),<br>
+                                    వరంగల్, తెలంగాణ - 506002 (Warangal, Telangana)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white uppercase tracking-wider">పాస్టర్ గారి ఫోన్ నంబర్</h4>
+                                <a href="tel:+919876543210" class="text-amber-400 text-base font-bold hover:underline block mt-1">+91 98765 43210</a>
+                                <p class="text-xs text-slate-400">ఆత్మీయ సంభాషణ మరియు ప్రార్థనల కొరకు సంప్రదించండి</p>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white uppercase tracking-wider">వాట్సాప్ మెసేజ్</h4>
+                                <a href="https://wa.me/919876543210" target="_blank" class="text-emerald-400 text-sm font-bold hover:underline block mt-1">చాట్ ప్రారంభించండి (Chat on WhatsApp)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Navigate Button -->
+                    <div>
+                        <a href="https://maps.google.com/?q=Church+of+Lord+Jesus+Christ+Warangal" target="_blank" 
+                           class="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm shadow-xl shadow-amber-500/20 transition-all">
+                            <i class="fa-solid fa-diamond-turn-right text-base"></i> గూగుల్ మ్యాప్స్‌లో దారి చూడండి (Navigate in Maps)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Map Iframe Right -->
+                <div class="lg:col-span-7 glass-panel rounded-3xl p-3 border border-amber-500/30 overflow-hidden shadow-2xl">
+                    <div class="w-full h-[400px] rounded-2xl overflow-hidden bg-slate-900">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121515.69467776185!2d79.52044814999999!3d17.9787337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334fbb4a6e87f3%3A0x6b490f23f66c9ff9!2sWarangal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1716611200000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="glass-panel border-t border-amber-500/20 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center space-x-1 shrink-0">
+                        <img src="assets/images/jesus.png" alt="Jesus" class="h-10 w-10 object-cover rounded-full border border-amber-500/60 shadow-md">
+                        <img src="assets/images/branham.png" alt="Prophet" class="h-10 w-10 object-cover rounded-full border border-amber-500/60 shadow-md">
+                    </div>
+                    <div>
+                        <div class="heading-font font-bold text-white text-base">CHURCH OF LORD JESUS CHRIST</div>
+                        <div class="text-xs text-amber-400">Warangal, Telangana | TMC Warangal (<a href="http://www.youtube.com/@tmcaw" target="_blank" class="underline hover:text-white">@tmcaw</a>)</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-300">
+                    <a href="#home" class="hover:text-amber-400">Home</a>
+                    <a href="#messages" class="hover:text-amber-400">Message Books</a>
+                    <a href="#gallery" class="hover:text-amber-400">Gallery</a>
+                    <a href="#prayer" class="hover:text-amber-400">Prayer Request</a>
+                    <a href="#contact" class="hover:text-amber-400">Location & Contact</a>
+                </div>
+
+                <div class="text-xs text-slate-500">
+                    © 2026 CLJC Warangal. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+
+
+        // ================= DYNAMIC MESSAGE BOOKS ENGINE (ALL 378 BOOKS) =================
+        let allBooks = [];
+        let displayedCount = 6;
+        let filteredBooks = [];
+
+        function initBooksLibrary() {
+            if (window.TELUGU_MESSAGES_DATA && Array.isArray(window.TELUGU_MESSAGES_DATA)) {
+                allBooks = window.TELUGU_MESSAGES_DATA;
+                filteredBooks = allBooks;
+                renderBooks();
+            } else {
+                fetch('assets/bible/telugu_messages.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        allBooks = data;
+                        filteredBooks = allBooks;
+                        renderBooks();
+                    })
+                    .catch(err => {
+                        console.error('Books fetch error:', err);
+                    });
+            }
+        }
+
+        function getTranslationId(fileUrl) {
+            if (!fileUrl) return null;
+            const match = fileUrl.match(/translationId=(\d+)/);
+            return match ? match[1] : null;
+        }
+
+        function getBookDownloadUrl(book) {
+            if (book.pdf_url) return book.pdf_url;
+            if (book.eid) return `https://www.messagehub.info/download.message?eid=${book.eid}`;
+            const tmId = getTranslationId(book.file_url);
+            if (tmId) {
+                return `https://www.messagehub.info/te/message_artifacts.do?tmId=${tmId}&languageId=28&format=Book`;
+            }
+            return 'https://www.messagehub.info/te/messages.do';
+        }
+
+        function renderBooks() {
+            const grid = document.getElementById('booksGrid');
+            const countBadge = document.getElementById('bookCountText');
+            const loadMoreBtn = document.getElementById('loadMoreContainer');
+            if (!grid) return;
+
+            if (countBadge) {
+                countBadge.innerHTML = `<i class="fa-solid fa-book text-amber-500"></i> మొత్తం ${filteredBooks.length} పుస్తకములు (378 లో)`;
+            }
+
+            const booksToRender = filteredBooks.slice(0, displayedCount);
+
+            if (booksToRender.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 glass-panel rounded-2xl border border-slate-800 notranslate" translate="no">
+                        <i class="fa-solid fa-book-open text-amber-500/40 text-4xl mb-3"></i>
+                        <h4 class="text-white font-bold text-base">ఎలాంటి పుస్తకాలు కనిపించలేదు</h4>
+                        <p class="text-xs text-slate-400 mt-1">దయచేసి మరొక పేరు లేదా కోడ్ ద్వారా వెతకండి.</p>
+                    </div>
+                `;
+                if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            grid.innerHTML = booksToRender.map((book, idx) => {
+                const bookUrl = getBookDownloadUrl(book);
+                const bookNum = book.id || (idx + 1);
+                return `
+                    <div class="book-card glass-panel rounded-2xl p-6 border border-amber-500/20 hover:border-amber-400/80 transition-all flex flex-col justify-between group shadow-lg hover:shadow-amber-500/10 notranslate" translate="no">
+                        <div>
+                            <div class="flex items-start justify-between mb-3">
+                                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30 font-mono">#${bookNum}</span>
+                                <span class="text-[11px] text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 flex items-center gap-1">
+                                    <i class="fa-solid fa-file-pdf"></i> PDF
+                                </span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold text-white mb-1.5 book-title group-hover:text-amber-300 transition-colors leading-snug notranslate" translate="no" lang="te">
+                                ${book.book_title}
+                            </h3>
+                            <p class="text-xs text-slate-400 mb-5 font-mono">
+                                ${book.description}
+                            </p>
+                        </div>
+                        <div>
+                            <a href="${bookUrl}" target="_blank"
+                               class="inline-flex items-center gap-2 text-xs font-bold px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 text-slate-950 border border-amber-400 transition-all w-full justify-center shadow-md">
+                                <i class="fa-solid fa-file-arrow-down text-rose-700 text-sm"></i> PDF పుస్తకం డౌన్‌లోడ్ / చదవండి
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+        }
+
+        function filterBooks() {
+            const input = document.getElementById('bookSearchInput').value.trim().toLowerCase();
+            if (!input) {
+                filteredBooks = allBooks;
+                displayedCount = 6;
+            } else {
+                filteredBooks = allBooks.filter(book => {
+                    const title = (book.book_title || '').toLowerCase();
+                    const desc = (book.description || '').toLowerCase();
+                    return title.includes(input) || desc.includes(input);
+                });
+                displayedCount = 12;
+            }
+            renderBooks();
+        }
+
+        // Initialize library when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initBooksLibrary);
+        } else {
+            initBooksLibrary();
+        }
+
+        // Prayer Request via WhatsApp
+        function sendPrayerWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('prayerName').value.trim();
+            const phone = document.getElementById('prayerPhone').value.trim();
+            const topic = document.getElementById('prayerTopic').value;
+            const details = document.getElementById('prayerDetails').value.trim();
+
+            const text = `*CLJC వరంగల్ చర్చి - ప్రార్థన విన్నపం*\n------------------------------\n*పేరు:* ${name}\n*ఫోన్ నంబర్:* ${phone}\n*అంశము:* ${topic}\n*వివరాలు:* ${details || 'దయచేసి మా కొరకు ప్రార్థించండి'}\n------------------------------\nదేవుని కృప మీకు తోడైయుండును గాక.`;
+
+            const encoded = encodeURIComponent(text);
+            const pastorWhatsApp = '919876543210'; // Replace with Pastor's actual WhatsApp number
+            window.open(`https://wa.me/${pastorWhatsApp}?text=${encoded}`, '_blank');
+        }
+    </script>
+</body>
+</html>
